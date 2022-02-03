@@ -1,6 +1,6 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
-import { Link, useParams } from 'react-router-dom';
+import { Link, useNavigate, useParams } from 'react-router-dom';
 
 //styles
 import styles from './ProductDetails.module.scss'
@@ -10,6 +10,8 @@ const ProductDetails = () => {
     const id = params.id
     const [products, setProducts] = useState([])
     const [loading, setLoading] = useState(true)
+    const navigate = useNavigate()
+
 
     useEffect(() => {
         axios.get(`https://fakestoreapi.com/products/${id}`)
@@ -34,7 +36,7 @@ const ProductDetails = () => {
                             <p className={styles.category}><span>Category:</span> {category}</p>
                             <div className={styles.info_footer}>
                                 <p className={styles.price}>{price}$</p>
-                                <button><Link to='/products'>Bach to shop</Link></button>
+                                <button onClick={() =>navigate(-1)}>Back</button>
                             </div>
                         </div>
                     </div>
