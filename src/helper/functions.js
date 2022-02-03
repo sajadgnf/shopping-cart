@@ -1,3 +1,5 @@
+import { useEffect } from 'react'
+
 const shorten = title => {
     const splitTitle = title.split(' ')
     const newTitle = `${splitTitle[0]} ${splitTitle[1]}`
@@ -18,4 +20,10 @@ const quantityCount = (state, id) => {
     }
 }
 
-export { shorten, isInCart, quantityCount }
+const useTitle = title => {
+    useEffect(() => {
+        document.title = title
+    }, [])
+}
+
+export { shorten, isInCart, quantityCount, useTitle }

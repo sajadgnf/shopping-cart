@@ -6,12 +6,17 @@ import styles from './Store.module.scss'
 //context
 import { productsContext } from '../context/ProductsContextProvider';
 
+// functions
+import { useTitle } from '../helper/functions';
+
 //component
 import Product from './shared/Product'
 
 const Store = () => {
 
     const { products, loading } = useContext(productsContext)
+
+    useTitle('Store')
 
     return (
         <>

@@ -1,6 +1,9 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
-import { Link, useNavigate, useParams } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
+
+// functions
+import { useTitle } from '../helper/functions';
 
 //styles
 import styles from './ProductDetails.module.scss'
@@ -12,6 +15,7 @@ const ProductDetails = () => {
     const [loading, setLoading] = useState(true)
     const navigate = useNavigate()
 
+    useTitle('Product details')
 
     useEffect(() => {
         axios.get(`https://fakestoreapi.com/products/${id}`)

@@ -7,12 +7,17 @@ import { cartContext } from '../context/CartContextProvider'
 //components
 import Cart from './shared/Cart';
 
+// fuctions
+import { useTitle } from '../helper/functions';
+
 // styles
 import styles from "./ShopCart.module.scss"
 
 const ShopCart = () => {
 
     const { state, dispatch } = useContext(cartContext)
+
+    useTitle('Cart')
 
     return (
         <>
