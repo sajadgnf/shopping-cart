@@ -1,0 +1,63 @@
+@import "../scss/functions";
+@import "../scss/variables";
+
+.navbarContainer {
+    @include flexStyle;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    justify-content: space-between;
+    background-color: #fff;
+    padding: 10px 150px;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+}
+
+.productsBtn {
+    @include buttonStyle;
+    font-size: 0.9rem;
+    font-weight: bold;
+    padding: 3px 15px;
+    border: 2px solid $mainColor;
+
+    a {
+        color: $mainColor;
+        text-decoration: none;
+    }
+
+    &:hover {
+        background-color: $mainColor;
+        color: #fff;
+        transition: all 0.5s ease-in-out;
+    }
+
+    &:hover > a {
+        color: #fff;
+    }
+}
+
+.cartButton {
+    position: relative;
+    cursor: pointer;
+
+    p {
+        @include flexStyle;
+        position: absolute;
+        top: -5px;
+        left: -8px;
+        background-color: $hoverColor;
+        color: #fff;
+        border-radius: 50%;
+        padding: 9px;
+        width: 10px;
+        height: 10px;
+        font-size: 0.8rem;
+        font-weight: bold;
+    }
+}
+
+@media (max-width: 847px) {
+    .navbarContainer {
+        padding: 10px 50px;
+    }
+}
