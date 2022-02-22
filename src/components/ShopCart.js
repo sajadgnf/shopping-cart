@@ -25,7 +25,7 @@ const ShopCart = () => {
                 state.checkout &&
                 <div className={styles.checkout}>
                     <h3>Checked Out Successfully</h3>
-                    <button><Link to="/products">Buy More</Link></button>
+                <Link to="/products">Buy More</Link>
                 </div>
             }
             {
