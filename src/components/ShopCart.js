@@ -57,7 +57,7 @@ const ShopCart = () => {
                 <div>
                     <div className={styles.checkout}>
                         <h3>Want To Buy?</h3>
-                        <button><Link to="/products">Go To Shop</Link></button>
+                        <Link to="/products">Go To Shop</Link>
                     </div>
                 </div>
             }

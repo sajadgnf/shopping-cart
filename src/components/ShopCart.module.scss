@@ -69,9 +69,11 @@
         color: $priceColor;
     }
 
-    button {
-        @include buttonStyle;
-        @include shadow;
+    a {
+          @include shadow;
+        text-decoration: none;
+        color: #fff;
+        font-weight: bold;
         background-color: $primaryColor;
         padding: 8px 20px;
         margin-top: 10px;
@@ -79,12 +81,6 @@
         &:hover {
             background: rgb(0, 65, 163);
         }
-    }
-
-    a {
-        text-decoration: none;
-        color: #fff;
-        font-weight: bold;
     }
 }
 
