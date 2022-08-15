@@ -2,16 +2,19 @@ import React, { useContext } from 'react';
 import { Link } from 'react-router-dom'
 
 //context
-import { cartContext } from '../context/CartContextProvider'
+import { cartContext } from '../../context/CartContextProvider'
 
 //components
-import Cart from './shared/Cart';
+import Cart from '../shared/Cart';
 
-// fuctions
-import { useTitle } from '../helper/functions';
+// functions
+import { useTitle } from '../../helper/functions';
 
 // styles
 import styles from "./ShopCart.module.scss"
+
+// image 
+import emptyCart from '../../assets/images/emptyCart.png'
 
 const ShopCart = () => {
 
@@ -25,7 +28,7 @@ const ShopCart = () => {
                 state.checkout &&
                 <div className={styles.checkout}>
                     <h3>Checked Out Successfully</h3>
-                <Link to="/products">Buy More</Link>
+                    <Link to="/products">Buy More</Link>
                 </div>
             }
             {
@@ -56,7 +59,8 @@ const ShopCart = () => {
                 !state.checkout && state.itemsCounter === 0 &&
                 <div>
                     <div className={styles.checkout}>
-                        <h3>Want To Buy?</h3>
+                        <img className={styles.emptyCartImg} src={emptyCart} alt="empty-cart" />
+                        <h3>Cart Is Empty Want To Buy?</h3>
                         <Link to="/products">Go To Shop</Link>
                     </div>
                 </div>

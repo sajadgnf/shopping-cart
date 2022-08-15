@@ -1,13 +1,13 @@
-@import "../scss/functions";
-@import "../scss/variables";
+@import "../../scss/functions";
+@import "../../scss/variables";
 
 .detailsContent {
     @include flexStyle;
+    @include shadow;
     max-width: 90vw;
     height: 550px;
     background-color: #fff;
-    border-radius: 5px;
-    border: 1px solid silver;
+    border-radius: 20px;
     overflow: hidden;
     padding: 2rem;
     margin: 150px auto 50px;
@@ -21,7 +21,7 @@
 
 .info {
     border: 1px solid silver;
-    border-radius: 5px;
+    border-radius: 20px;
     padding: 2rem;
 
     .info_title {

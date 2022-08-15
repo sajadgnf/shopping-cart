@@ -3,56 +3,64 @@
 
 .productContainer {
     @include flexStyle;
-    align-items: flex-start;
+    @include shadow;
     justify-content: flex-start;
     flex-direction: column;
-    padding: 20px;
-    background-color: #fff;
-    border-radius: 5px;
-    border: 1px solid silver;
+    padding: 40px 20px 15px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 20px;
     transition: all 0.3s ease-in-out;
+    position: relative;
+
+    .likeBtn {
+        @include buttonStyle;
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        img {
+            width: 25px;
+        }
+    }
 
     &:hover {
         @include shadow;
     }
+}
+
+.detailsLink {
+    @include flexStyle;
+    flex-direction: column;
+    letter-spacing: 1px;
+    color: #333;
+    text-decoration: none;
+    width: 100%;
 
     .productImg {
-        width: 100%;
+        width: 80%;
         height: 200px;
-    }
-
-    .title {
-        padding: 30px 0 15px;
-    }
-
-    .price {
-        padding-bottom: 30px;
-        color: $secondaryColor;
     }
 }
 
-.btnsContainer {
-    @include flexStyle;
-    justify-content: space-between;
+.detailsContainer {
     width: 100%;
-
-    button {
-        @include buttonStyle;
-    }
-
-    .detailsBtn {
-        letter-spacing: 0.5px;
-        color: $mainColor;
+    .title {
+        padding: 60px 0 5px;
         font-size: 1rem;
-        text-decoration: none;
+    }
+    .details {
+        padding-bottom: 20px;
+        font-size: 0.8rem;
     }
 }
 
 .buyBtns {
     @include flexStyle;
+    justify-content: space-between;
+    width: 100%;
 
     button {
         @include shadow;
+        @include buttonStyle;
         background-color: $mainColor;
         color: #fff;
         padding: 8px 30px;
@@ -63,10 +71,15 @@
             background-color: $hoverColor;
         }
     }
+
+    .price {
+        color: $secondaryColor;
+    }
 }
 
 .quantityBtns {
     @include flexStyle;
+
     .quantityBtn {
         @include flexStyle;
         width: 30px;
@@ -90,5 +103,3 @@
         margin: auto;
     }
 }
-
-

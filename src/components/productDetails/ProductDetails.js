@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 
 // functions
-import { useTitle } from '../helper/functions';
+import { useTitle } from '../../helper/functions';
 
 //styles
 import styles from './ProductDetails.module.scss'

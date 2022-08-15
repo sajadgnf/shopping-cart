@@ -2,17 +2,18 @@ import React, { useContext } from 'react'
 import { Link } from 'react-router-dom'
 
 // styles
-import styles from './Navbar.module.scss'
+import styles from './Header.module.scss'
 
 // image
-import cardImg from '../assets/images/cart.svg'
+import cardImg from '../../assets/images/cart.svg'
 
 // context
-import {cartContext} from '../context/CartContextProvider'
+import { cartContext } from '../../context/CartContextProvider'
 
-const Navbar = () => {
 
-    const {state} = useContext(cartContext)
+const Header = () => {
+    const { state } = useContext(cartContext)
+
 
     return (
         <div className={styles.navbarContainer}>
@@ -25,7 +26,7 @@ const Navbar = () => {
                 </div>
             </Link>
         </div >
-    )
-}
+    );
+};
 
-export default Navbar
+export default Header;

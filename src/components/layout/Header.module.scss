@@ -1,16 +1,17 @@
-@import "../scss/functions";
-@import "../scss/variables";
+@import "../../scss/functions";
+@import "../../scss/variables";
 
 .navbarContainer {
     @include flexStyle;
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    @include shadow;
     justify-content: space-between;
     background-color: #fff;
-    padding: 10px 150px;
+    padding: 15px 150px;
     position: fixed;
     top: 0;
     right: 0;
     left: 0;
+    z-index: 2;
 }
 
 .productsBtn {

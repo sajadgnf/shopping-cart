@@ -4,13 +4,13 @@ import React, { useContext } from 'react';
 import styles from './Store.module.scss'
 
 //context
-import { productsContext } from '../context/ProductsContextProvider';
+import { productsContext } from '../../context/ProductsContextProvider';
 
 // functions
-import { useTitle } from '../helper/functions';
+import { useTitle } from '../../helper/functions';
 
 //component
-import Product from './shared/Product'
+import Product from '../shared/Product'
 
 const Store = () => {
 
