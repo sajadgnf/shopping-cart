@@ -12,25 +12,25 @@
 
 @media (max-width: 847px) {
     .productsContainer {
-        margin: 100px 50px 50px;
+        padding: 100px 50px 50px;
     }
 }
 
 @media (max-width: 648px) {
     .productsContainer {
-        margin: 100px 20px 50px;
+        padding: 100px 20px 50px;
     }
 }
 
 @media (max-width: 595px) {
     .productsContainer {
-        margin: 100px 50px 50px;
+        padding: 100px 50px 50px;
     }
 }
 
 @media (max-width: 450px) {
     .productsContainer {
          grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
-        margin: 100px 20px 50px;
+        padding: 100px 20px 50px;
     }
 }
